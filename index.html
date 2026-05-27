@@ -2,11 +2,869 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Glow en Casa</title>
-  <meta name="description" content="Guías y comparativas de belleza fácil para comprar mejor en Amazon.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Glow en Casa | Belleza fácil en casa y productos beauty de Amazon</title>
+  <meta name="description" content="Guías y comparativas de belleza fácil en casa: pestañas magnéticas, espejos de maquillaje con luz, organizadores, brochas, rulos sin calor y accesorios beauty.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Glow en Casa">
+  <meta name="theme-color" content="#fbf7f2">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Glow en Casa | Belleza fácil en casa">
+  <meta property="og:description" content="Guías, comparativas y productos beauty para cuidarte en casa y comprar mejor en Amazon.">
+  <meta property="og:site_name" content="Glow en Casa">
+
+  <style>
+    :root {
+      --bg:#fbf7f2;
+      --paper:#fff;
+      --text:#2f2724;
+      --muted:#6f625d;
+      --line:#eaded6;
+      --accent:#c9937a;
+      --accent-dark:#8f5c49;
+      --soft:#f5ece5;
+      --shadow:0 18px 50px rgba(47,39,36,.09);
+    }
+
+    * { box-sizing:border-box; }
+
+    html { scroll-behavior:smooth; }
+
+    body {
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a { color:inherit; }
+
+    .wrap {
+      width:min(1180px, calc(100% - 32px));
+      margin:auto;
+    }
+
+    .topbar {
+      background:#2f2724;
+      color:#fff;
+      text-align:center;
+      padding:10px 16px;
+      font-size:13px;
+    }
+
+    .header {
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(251,247,242,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav {
+      min-height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+    }
+
+    .logo-mark {
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#e7c8b8,#c9937a);
+      color:#fff;
+      font-weight:900;
+      letter-spacing:-.06em;
+      box-shadow:0 12px 26px rgba(201,147,122,.34);
+    }
+
+    .logo strong {
+      display:block;
+      font-size:21px;
+      letter-spacing:-.04em;
+      line-height:1;
+    }
+
+    .logo span:last-child {
+      display:block;
+      margin-top:5px;
+      font-size:11px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.15em;
+      font-weight:800;
+    }
+
+    .menu {
+      display:flex;
+      align-items:center;
+      gap:18px;
+      font-size:14px;
+      font-weight:800;
+    }
+
+    .menu a {
+      text-decoration:none;
+    }
+
+    .menu a:hover {
+      color:var(--accent-dark);
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:13px 22px;
+      border-radius:999px;
+      border:1px solid transparent;
+      text-decoration:none;
+      font-weight:900;
+      line-height:1.1;
+      text-align:center;
+      transition:.2s ease;
+    }
+
+    .btn-primary {
+      background:var(--accent);
+      color:#fff;
+      box-shadow:0 16px 30px rgba(201,147,122,.32);
+    }
+
+    .btn-primary:hover {
+      background:var(--accent-dark);
+      transform:translateY(-2px);
+    }
+
+    .btn-light {
+      background:#fff;
+      color:var(--text);
+      border-color:var(--line);
+    }
+
+    .btn-light:hover {
+      border-color:var(--accent);
+      color:var(--accent-dark);
+      transform:translateY(-2px);
+    }
+
+    .hero {
+      padding:72px 0 52px;
+    }
+
+    .hero-grid {
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:46px;
+      align-items:center;
+    }
+
+    .pill {
+      display:inline-flex;
+      width:fit-content;
+      margin-bottom:18px;
+      padding:8px 13px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+      color:var(--accent-dark);
+      font-size:13px;
+      font-weight:900;
+    }
+
+    h1 {
+      margin:0 0 22px;
+      font-size:clamp(42px,6vw,78px);
+      line-height:.94;
+      letter-spacing:-.065em;
+    }
+
+    h1 span {
+      color:var(--accent-dark);
+    }
+
+    .lead {
+      max-width:690px;
+      margin:0 0 28px;
+      color:var(--muted);
+      font-size:clamp(17px,2vw,21px);
+      line-height:1.62;
+    }
+
+    .actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      align-items:center;
+    }
+
+    .chips {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:24px;
+    }
+
+    .chips span {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:9px 12px;
+      color:var(--muted);
+      font-size:13px;
+      font-weight:800;
+    }
+
+    .visual {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:34px;
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+
+    .visual-inner {
+      min-height:460px;
+      border-radius:26px;
+      background:
+        radial-gradient(circle at 20% 18%,#fff 0 12%,transparent 13%),
+        radial-gradient(circle at 78% 24%,rgba(200,168,107,.22) 0 10%,transparent 11%),
+        linear-gradient(135deg,#f4e4da,#fff9f5);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .float {
+      position:absolute;
+      width:215px;
+      background:rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:15px;
+      box-shadow:0 14px 30px rgba(47,39,36,.08);
+    }
+
+    .float strong {
+      display:block;
+      margin-bottom:5px;
+    }
+
+    .float span {
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .f1 { top:34px; left:28px; }
+    .f2 { top:160px; right:24px; }
+    .f3 { left:38px; bottom:34px; }
+
+    .badge {
+      position:absolute;
+      right:52px;
+      bottom:52px;
+      width:165px;
+      height:165px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      background:linear-gradient(135deg,#e7c8b8,#c9937a);
+      color:#fff;
+      font-size:25px;
+      font-weight:950;
+      line-height:.95;
+      letter-spacing:-.05em;
+      box-shadow:0 22px 44px rgba(201,147,122,.34);
+    }
+
+    .notice {
+      background:#fff;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      padding:18px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .notice strong {
+      color:var(--text);
+    }
+
+    .section {
+      padding:76px 0;
+    }
+
+    .white {
+      background:#fff;
+    }
+
+    .kicker {
+      margin-bottom:10px;
+      color:var(--accent-dark);
+      font-size:13px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+    }
+
+    h2 {
+      margin:0;
+      font-size:clamp(31px,4vw,52px);
+      line-height:1;
+      letter-spacing:-.055em;
+    }
+
+    .intro {
+      max-width:700px;
+      margin:14px 0 34px;
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    .grid3 {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .grid4 {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .card,
+    .product,
+    .article {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:26px;
+      box-shadow:0 10px 28px rgba(47,39,36,.045);
+    }
+
+    .card {
+      min-height:270px;
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .card:hover,
+    .article:hover {
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+    }
+
+    .icon {
+      width:52px;
+      height:52px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      background:var(--soft);
+      color:var(--accent-dark);
+      font-weight:950;
+      margin-bottom:18px;
+    }
+
+    h3 {
+      margin:0 0 10px;
+      font-size:23px;
+      line-height:1.12;
+      letter-spacing:-.035em;
+    }
+
+    .card p,
+    .product p,
+    .article p {
+      color:var(--muted);
+      margin:0;
+    }
+
+    .link {
+      margin-top:20px;
+      color:var(--accent-dark);
+      font-weight:950;
+      text-decoration:none;
+    }
+
+    .link:hover {
+      text-decoration:underline;
+    }
+
+    .product {
+      min-height:430px;
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .product-img {
+      height:160px;
+      border-radius:20px;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      margin-bottom:16px;
+      color:var(--accent-dark);
+      font-weight:950;
+      background:linear-gradient(135deg,#f2e1d7,#fff8f3);
+    }
+
+    .label {
+      display:inline-flex;
+      width:max-content;
+      margin-bottom:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:var(--soft);
+      color:var(--accent-dark);
+      font-size:12px;
+      font-weight:950;
+    }
+
+    .product ul {
+      list-style:none;
+      padding:0;
+      margin:14px 0 18px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .product li {
+      margin-bottom:7px;
+    }
+
+    .product li::before {
+      content:"✓";
+      color:var(--accent-dark);
+      font-weight:950;
+      margin-right:7px;
+    }
+
+    .product .btn {
+      width:100%;
+      margin-top:auto;
+    }
+
+    .article {
+      min-height:250px;
+      padding:24px;
+      text-decoration:none;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .article small {
+      color:var(--accent-dark);
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      margin-bottom:14px;
+    }
+
+    .article b {
+      margin-top:auto;
+      color:var(--accent-dark);
+    }
+
+    .cta {
+      padding:84px 0;
+      background:linear-gradient(135deg,#2f2724,#493832);
+      color:#fff;
+    }
+
+    .cta h2 {
+      color:#fff;
+    }
+
+    .cta p {
+      color:rgba(255,255,255,.76);
+    }
+
+    .faq details {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px 20px;
+      margin-bottom:12px;
+    }
+
+    .faq summary {
+      cursor:pointer;
+      font-weight:950;
+    }
+
+    .faq p {
+      color:var(--muted);
+    }
+
+    .footer {
+      background:#fff;
+      border-top:1px solid var(--line);
+      padding:44px 0;
+    }
+
+    .footer-grid {
+      display:grid;
+      grid-template-columns:1.25fr 1fr 1fr;
+      gap:26px;
+    }
+
+    .footer a {
+      display:block;
+      color:var(--muted);
+      text-decoration:none;
+      margin-bottom:8px;
+    }
+
+    .footer p {
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .small {
+      border-top:1px solid var(--line);
+      margin-top:28px;
+      padding-top:20px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media(max-width:1020px) {
+      .menu { display:none; }
+      .hero-grid,
+      .footer-grid { grid-template-columns:1fr; }
+      .grid3,
+      .grid4 { grid-template-columns:repeat(2,1fr); }
+    }
+
+    @media(max-width:640px) {
+      .wrap { width:min(100% - 22px,1180px); }
+      .hero { padding-top:42px; }
+      .grid3,
+      .grid4 { grid-template-columns:1fr; }
+      .actions .btn { width:100%; }
+      .float {
+        position:relative;
+        inset:auto;
+        width:auto;
+        margin:12px;
+      }
+      .visual-inner { min-height:430px; }
+      .badge {
+        width:120px;
+        height:120px;
+        right:18px;
+        bottom:18px;
+        font-size:20px;
+      }
+      .section { padding:58px 0; }
+      .nav > .btn { display:none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Glow en Casa",
+    "description":"Guías y comparativas de belleza fácil en casa para comprar mejor en Amazon.",
+    "inLanguage":"es-ES",
+    "url":"/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"¿Glow en Casa vende productos directamente?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No. Glow en Casa recomienda productos disponibles en Amazon y la compra se realiza directamente allí."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"¿Los precios pueden cambiar?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Sí. Los precios, disponibilidad y condiciones pueden cambiar, por eso conviene revisar siempre la ficha del producto."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
-  <h1>Glow en Casa</h1>
-  <p>Web de belleza fácil en casa. Próximamente.</p>
+  <div class="topbar">Guías y comparativas beauty para elegir mejor antes de comprar en Amazon</div>
+
+  <header class="header">
+    <div class="wrap nav">
+      <a class="logo" href="/">
+        <span class="logo-mark">G</span>
+        <span>
+          <strong>Glow en Casa</strong>
+          <span>Beauty fácil</span>
+        </span>
+      </a>
+
+      <nav class="menu" aria-label="Menú principal">
+        <a href="#categorias">Categorías</a>
+        <a href="#productos">Favoritos</a>
+        <a href="#blog">Blog SEO</a>
+        <a href="#faq">Dudas</a>
+      </nav>
+
+      <a class="btn btn-primary" href="#productos">Ver favoritos</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="pill">Belleza fácil, práctica y en casa</div>
+          <h1>Tu glow diario empieza <span>sin complicarte</span>.</h1>
+          <p class="lead">
+            En Glow en Casa encontrarás guías y comparativas para comprar productos de belleza en Amazon con más criterio: pestañas magnéticas con aplicador, espejos de maquillaje con luz, organizadores, brochas, rulos sin calor y accesorios de skincare.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="#productos">Ver productos recomendados</a>
+            <a class="btn btn-light" href="/mejores-pestanas-magneticas-con-aplicador/">Empezar por pestañas magnéticas</a>
+          </div>
+
+          <div class="chips">
+            <span>Comparativas de compra</span>
+            <span>Guías para principiantes</span>
+            <span>Contenido SEO evergreen</span>
+            <span>Enlaces directos a Amazon</span>
+          </div>
+        </div>
+
+        <div class="visual">
+          <div class="visual-inner">
+            <div class="float f1"><strong>Pestañas magnéticas</strong><span>Para realzar la mirada sin pegamento ni extensiones.</span></div>
+            <div class="float f2"><strong>Espejos LED</strong><span>Para maquillarte mejor incluso con poca luz.</span></div>
+            <div class="float f3"><strong>Organización beauty</strong><span>Para encontrar tus básicos sin perder tiempo.</span></div>
+            <div class="badge">Glow<br>en casa</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="notice">
+      <div class="wrap">
+        <strong>Aviso de afiliación:</strong> como Afiliados de Amazon, podemos obtener ingresos por compras adscritas que cumplan los requisitos aplicables. Comprar desde nuestros enlaces no debería suponerte un coste adicional.
+      </div>
+    </section>
+
+    <section class="section white" id="categorias">
+      <div class="wrap">
+        <div class="kicker">Compra por necesidad</div>
+        <h2>Belleza en casa, ordenada por lo que quieres conseguir.</h2>
+        <p class="intro">La web está pensada para posicionar en Google búsquedas con intención de compra y llevar a la usuaria hacia guías comparativas y productos concretos.</p>
+
+        <div class="grid3">
+          <article class="card">
+            <div><div class="icon">01</div><h3>Pestañas magnéticas</h3><p>Guías para elegir pestañas magnéticas con aplicador, efecto natural, sin delineador o para principiantes.</p></div>
+            <a class="link" href="/pestanas-magneticas/">Ver pestañas y accesorios →</a>
+          </article>
+
+          <article class="card">
+            <div><div class="icon">02</div><h3>Maquillaje fácil</h3><p>Espejos de maquillaje con luz, brochas, esponjas, limpiadores y básicos para maquillarte mejor en casa.</p></div>
+            <a class="link" href="/maquillaje-facil/">Ver maquillaje fácil →</a>
+          </article>
+
+          <article class="card">
+            <div><div class="icon">03</div><h3>Organización beauty</h3><p>Organizadores de maquillaje, neceseres de viaje, maletines y soluciones para baños pequeños.</p></div>
+            <a class="link" href="/organizadores-maquillaje/">Ver organizadores →</a>
+          </article>
+
+          <article class="card">
+            <div><div class="icon">04</div><h3>Cejas en casa</h3><p>Herramientas para peinar, definir y mantener tus cejas sin depender siempre de un centro de estética.</p></div>
+            <a class="link" href="/cejas-en-casa/">Ver productos para cejas →</a>
+          </article>
+
+          <article class="card">
+            <div><div class="icon">05</div><h3>Pelo fácil</h3><p>Rulos sin calor, accesorios para dormir mejor el pelo, cepillos y soluciones rápidas para el día a día.</p></div>
+            <a class="link" href="/pelo-facil/">Ver accesorios de pelo →</a>
+          </article>
+
+          <article class="card">
+            <div><div class="icon">06</div><h3>Skincare gadgets</h3><p>Gua sha, rodillos faciales, diademas, mini organizadores y accesorios para hacer más cómoda tu rutina facial.</p></div>
+            <a class="link" href="/skincare-gadgets/">Ver gadgets de skincare →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="productos">
+      <div class="wrap">
+        <div class="kicker">Favoritos para empezar</div>
+        <h2>Productos pensados para generar clics.</h2>
+        <p class="intro">Selecciones visuales, fáciles de entender y relacionadas con rutinas beauty reales. Más adelante sustituiremos estos enlaces por productos concretos con tu tag de afiliada.</p>
+
+        <div class="grid4">
+          <article class="product">
+            <div class="product-img">Pestañas magnéticas<br>con aplicador</div>
+            <span class="label">Mirada rápida</span>
+            <h3>Pestañas magnéticas con aplicador</h3>
+            <p>Para quienes quieren efecto pestañas postizas sin pegamento y sin extensiones pelo a pelo.</p>
+            <ul><li>Muy buscadas por principiantes</li><li>Compra rápida y visual</li><li>Buen tema para comparativas</li></ul>
+            <a class="btn btn-primary" href="https://www.amazon.es/s?k=pesta%C3%B1as+magn%C3%A9ticas+con+aplicador" target="_blank" rel="nofollow sponsored noopener">Ver opciones en Amazon</a>
+          </article>
+
+          <article class="product">
+            <div class="product-img">Espejo de maquillaje<br>con luz LED</div>
+            <span class="label">Más precisión</span>
+            <h3>Espejo de maquillaje con luz</h3>
+            <p>Para maquillarte, poner pestañas o depilar cejas con mejor visibilidad en casa.</p>
+            <ul><li>Ticket más interesante</li><li>Encaja con varias categorías</li><li>Perfecto para guías de compra</li></ul>
+            <a class="btn btn-primary" href="https://www.amazon.es/s?k=espejo+maquillaje+con+luz" target="_blank" rel="nofollow sponsored noopener">Ver opciones en Amazon</a>
+          </article>
+
+          <article class="product">
+            <div class="product-img">Organizador<br>de maquillaje</div>
+            <span class="label">Orden beauty</span>
+            <h3>Organizador de maquillaje</h3>
+            <p>Para ordenar maquillaje, brochas y skincare sin ocupar todo el baño o tocador.</p>
+            <ul><li>Necesidad práctica</li><li>Ideal para baño pequeño</li><li>Buena venta cruzada</li></ul>
+            <a class="btn btn-primary" href="https://www.amazon.es/s?k=organizador+maquillaje" target="_blank" rel="nofollow sponsored noopener">Ver opciones en Amazon</a>
+          </article>
+
+          <article class="product">
+            <div class="product-img">Set de brochas<br>para principiantes</div>
+            <span class="label">Maquillaje fácil</span>
+            <h3>Brochas para principiantes</h3>
+            <p>Para aplicar mejor base, corrector, colorete y sombras sin comprar herramientas al azar.</p>
+            <ul><li>Fácil de explicar</li><li>Permite comparativas</li><li>Complementa limpiadores</li></ul>
+            <a class="btn btn-primary" href="https://www.amazon.es/s?k=brochas+maquillaje+principiantes" target="_blank" rel="nofollow sponsored noopener">Ver opciones en Amazon</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="blog">
+      <div class="wrap">
+        <div class="kicker">Blog para posicionar</div>
+        <h2>Artículos para atraer tráfico y llevarlo a producto.</h2>
+        <p class="intro">El blog debe resolver dudas reales, retener a la usuaria y llevarla de forma natural a una comparativa o enlace de Amazon.</p>
+
+        <div class="grid3">
+          <a class="article" href="/pestanas-magneticas-vs-extensiones-pelo-a-pelo/">
+            <small>Pestañas</small>
+            <h3>Pestañas magnéticas vs extensiones pelo a pelo</h3>
+            <p>Comparamos comodidad, precio, duración, dificultad y cuándo conviene cada opción.</p>
+            <b>Leer comparativa →</b>
+          </a>
+
+          <a class="article" href="/como-poner-pestanas-magneticas-con-aplicador/">
+            <small>Tutorial</small>
+            <h3>Cómo poner pestañas magnéticas con aplicador</h3>
+            <p>Guía paso a paso para principiantes, errores habituales y accesorios útiles.</p>
+            <b>Ver paso a paso →</b>
+          </a>
+
+          <a class="article" href="/organizar-maquillaje-bano-pequeno/">
+            <small>Organización</small>
+            <h3>Cómo organizar maquillaje en un baño pequeño</h3>
+            <p>Ideas prácticas para ahorrar espacio y tener tus productos más visibles.</p>
+            <b>Ver ideas →</b>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <h2>Empieza por productos que la usuaria entiende y quiere clicar.</h2>
+        <p class="intro">Para validar la web, publicaremos pocas páginas pero bien orientadas: home, comparativas comerciales, blog informativo y aviso de afiliados.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/mejores-pestanas-magneticas-con-aplicador/">Crear primera guía</a>
+          <a class="btn btn-light" href="#productos">Ver productos base</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="faq">
+      <div class="wrap">
+        <div class="kicker">Preguntas frecuentes</div>
+        <h2>Antes de comprar desde Glow en Casa.</h2>
+
+        <div class="faq">
+          <details>
+            <summary>¿Glow en Casa vende productos directamente?</summary>
+            <p>No. Glow en Casa recomienda productos disponibles en Amazon. La compra, el pago, el envío y la atención postventa se realizan directamente en Amazon.</p>
+          </details>
+
+          <details>
+            <summary>¿Los productos cuestan más si compro desde un enlace?</summary>
+            <p>No debería suponerte un coste adicional. Si compras desde algunos enlaces, Glow en Casa puede recibir una comisión por la recomendación.</p>
+          </details>
+
+          <details>
+            <summary>¿Por qué no aparecen precios o valoraciones exactas?</summary>
+            <p>Porque los precios, disponibilidad, promociones y valoraciones de Amazon pueden cambiar. Es mejor comprobar siempre la ficha actualizada del producto antes de comprar.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h2>Glow en Casa</h2>
+        <p>Guías y comparativas de belleza práctica para comprar mejor en Amazon: pestañas magnéticas, maquillaje fácil, organización beauty, pelo y accesorios de cuidado facial.</p>
+        <p>Como Afiliados de Amazon, podemos obtener ingresos por compras adscritas que cumplan los requisitos aplicables.</p>
+      </div>
+
+      <div>
+        <h3>Categorías</h3>
+        <a href="/pestanas-magneticas/">Pestañas magnéticas</a>
+        <a href="/maquillaje-facil/">Maquillaje fácil</a>
+        <a href="/organizadores-maquillaje/">Organizadores de maquillaje</a>
+        <a href="/pelo-facil/">Pelo fácil</a>
+        <a href="/skincare-gadgets/">Skincare gadgets</a>
+      </div>
+
+      <div>
+        <h3>Legal</h3>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-de-privacidad/">Política de privacidad</a>
+        <a href="/politica-de-cookies/">Política de cookies</a>
+        <a href="/aviso-de-afiliados/">Aviso de afiliados</a>
+        <a href="/contacto/">Contacto</a>
+      </div>
+    </div>
+
+    <div class="wrap small">
+      Glow en Casa es una web de contenido informativo y comparativo. Las recomendaciones no sustituyen la revisión de la ficha oficial del producto en Amazon. Los enlaces externos pueden ser enlaces de afiliado.
+    </div>
+  </footer>
 </body>
 </html>
